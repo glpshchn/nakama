@@ -1,0 +1,21 @@
+{
+  "name": "nakama-space",
+  "version": "1.0.0",
+  "description": "Telegram Mini App - Social Network",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd backend && npm run dev",
+    "client": "cd frontend && npm start",
+    "build": "cd frontend && npm run build",
+    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "setup-defaults": "node backend/scripts/setup-default-images.js",
+    "postinstall": "npm run setup-defaults"
+  },
+  "keywords": ["telegram", "mini-app", "social-network", "react", "nodejs"],
+  "author": "NakamaSpace",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
